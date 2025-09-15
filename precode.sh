@@ -37,11 +37,11 @@ find . -name "*.txt" > dir1/summary.txt
 cat dir2/list.txt >> dir1/summary.txt   
 
 # определяем переменную окружения NAME со значением "Всем студентам"
-export VAR='Всем студентам'
+export GREETING='Всем студентам'
 
 # запускаем task/dir2/hello.sh с переменной окружения NAME в качестве аргумента
 # вывод скрипта должен дописаться в файл task/dir1/summary.txt
-./dir2/hello.sh "$VAR" >> dir1/summary.txt
+./dir2/hello.sh "$GREETING" >> dir1/summary.txt
 
 # перемещаем с переименованием task/dir1/summary.txt в task/Практическое задание
 mv dir1/summary.txt 'Практическое задание.txt'
